@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Admin | Quick Credit</title>
+    <link rel='shortcut icon' type='image/x-icon' href='../favicon.png' />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
+
+  </head>
+
+  <body class="">
+    <div id="container">
+      <div id="header">
+        <header class="main-header">
+          <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+              <a href="index.html"><img src="../assets/images/logo.png" /></a>
+            </div>
+            <div class="nav-btn">
+              <label for="nav-check">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+            </div>
+
+            <div class="nav-links">
+              <a href="dashboard.html">DASHBOARD</a>
+              <a href="users.html">USERS</a>
+              <a class="active" href="donations.html">donationS</a>
+              <a href="profile.html">PROFILE</a>
+              <a href="signin.html">LOG OUT</a>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div id="content-wrap">
+        <section>
+          <div class="table-container">
+            <h2>Repaid donations</h2>
+            <p>You can view all donations and filter by state.</p>
+            <div class="">
+              <span class="filter-title"><strong>Filter: </strong></span>
+              <div class="filter blue semi-square">
+                <select name="filter-donation" onchange="filterdonation(this)">
+                        <option value="donations">All donations</option>
+                        <option value="current">Current donations</option>
+                        <option value="repaid" selected >Repaid donations</option>
+                        <option value="pending">Pending donations</option>
+                        <!-- <option value="rejected">Rejected donations</option> -->
+                    </select>
+              </div>
+            </div>
+
+            <table>
+              <thead>
+                <tr class="table-head">
+                  <th>S/N</th>
+                  <th>Amount(Ksh)</th>
+                  <th>Tenor(Months)</th>
+                  <th>Installment(Ksh)</th>
+                  <th>Balance(Ksh)</th>
+                  <th>Interest(Ksh)</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Repaid</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="tableRow" onclick="window.location='view_donation_repaid.html'">
+                  <td data-column="#">1</td>
+                  <td data-column="Amount(Ksh)">50,000</td>
+                  <td data-column="Tenor(Months)">2</td>
+                  <td data-column="Installment(Ksh)">26,250</td>
+                  <td data-column="Balance(Ksh)">0</td>
+                  <td data-column="Interest(Ksh)">2,500</td>
+                  <td data-column="Date">09/04/2021</td>
+                  <td data-column="Status">Approved</td>
+                  <td data-column="Repaid">Yes</td>
+                </tr>
+                <tr id="tableRow" onclick="window.location='view_donation_repaid.html'">
+                  <td data-column="#">2</td>
+                  <td data-column="Amount(Ksh)">350,000</td>
+                  <td data-column="Tenor(Months)">3</td>
+                  <td data-column="Installment(Ksh)">122,500</td>
+                  <td data-column="Balance(Ksh)">0</td>
+                  <td data-column="Interest(Ksh)">17,500</td>
+                  <td data-column="Date">09/03/2021</td>
+                  <td data-column="Status">Approved</td>
+                  <td data-column="Repaid">Yes</td>
+                </tr>
+                <tr id="tableRow" onclick="window.location='view_donation_repaid.html'">
+                  <td data-column="#">3</td>
+                  <td data-column="Amount(Ksh)">150,000</td>
+                  <td data-column="Tenor(Months)">4</td>
+                  <td data-column="Installment(Ksh)">39,375</td>
+                  <td data-column="Balance(Ksh)">0</td>
+                  <td data-column="Interest(Ksh)">7,500</td>
+                  <td data-column="Date">20/02/2021</td>
+                  <td data-column="Status">Approved</td>
+                  <td data-column="Repaid">Yes</td>
+                </tr>
+                <tr id="tableRow" onclick="window.location='view_donation_repaid.html'">
+                  <td data-column="#">4</td>
+                  <td data-column="Amount(Ksh)">1,000,000</td>
+                  <td data-column="Tenor(Months)">10</td>
+                  <td data-column="Installment(Ksh)">105,000</td>
+                  <td data-column="Balance(Ksh)">0</td>
+                  <td data-column="Interest(Ksh)">50,000</td>
+                  <td data-column="Date">05/11/2018</td>
+                  <td data-column="Status">Approved</td>
+                  <td data-column="Repaid">Yes</td>
+                </tr>
+                <tr id="tableRow" onclick="window.location='view_donation_repaid.html'">
+                  <td data-column="#">5</td>
+                  <td data-column="Amount(Ksh)">1,000,000</td>
+                  <td data-column="Tenor(Months)">10</td>
+                  <td data-column="Installment(Ksh)">105,000</td>
+                  <td data-column="Balance(Ksh)">0</td>
+                  <td data-column="Interest(Ksh)">50,000</td>
+                  <td data-column="Date">05/11/2018</td>
+                  <td data-column="Status">Approved</td>
+                  <td data-column="Repaid">Yes</td>
+                </tr>
+                <tr id="tableRow" onclick="window.location='view_donation_repaid.html'">
+                  <td data-column="#">6</td>
+                  <td data-column="Amount(Ksh)">1,000,000</td>
+                  <td data-column="Tenor(Months)">10</td>
+                  <td data-column="Installment(Ksh)">105,000</td>
+                  <td data-column="Balance(Ksh)">0</td>
+                  <td data-column="Interest(Ksh)">50,000</td>
+                  <td data-column="Date">05/11/2018</td>
+                  <td data-column="Status">Approved</td>
+                  <td data-column="Repaid">Yes</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <br/>
+          <div class="pagination-center">
+            <div class="pagination">
+              <a href="#">&laquo;</a>
+              <a class="active" href="#">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+              <a href="#">6</a>
+              <a href="#">&raquo;</a>
+            </div>
+          </div>
+
+        </section>
+      </div>
+      <div id="footer" class="bg-dark text-white text-center">
+        <p>Developed by Munesh</p>
+        <p>Copyright © 2021</p>
+      </div>
+    </div>
+    <script src="../js/main.js"></script>
+  </body>
+
+</html>
